@@ -10,12 +10,12 @@ from datetime import datetime, timedelta
 
 # SSH Configuration
 SSH_HOST = "78.128.134.167"
-SSH_USER = "adam"
-SSH_PASSWORD = "adam123"
 SSH_PORT = 22
 
 # Repository Configuration
 GITHUB_REPO = input("Enter GitHub repository URL (e.g., https://github.com/user/repo.git): ").strip()
+SSH_USER = input("Enter SSH username: ").strip()
+SSH_PASSWORD = input("Enter SSH password: ").strip()
 REPO_NAME = GITHUB_REPO.split("/")[-1].replace(".git", "")
 WORK_DIR = f"/home/{SSH_USER}/{REPO_NAME}"
 
